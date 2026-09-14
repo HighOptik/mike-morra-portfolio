@@ -44,8 +44,8 @@ export default function Home() {
           <h2>UberLoop</h2>
           <img
             className="featured-shot"
-            src={asset("art/levelup.jpg")}
-            alt="UberLoop level up"
+            src={asset("art/levelup.gif")}
+            alt="UberLoop gameplay"
           />
           <p>{featured.blurb}</p>
           <div className="tags">
