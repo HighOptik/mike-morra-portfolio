@@ -331,6 +331,10 @@ html {
   background: #3ce8e0;
 }
 
+.featured-carousel .actions {
+  margin-top: 18px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .featured-track {
     transition: none;

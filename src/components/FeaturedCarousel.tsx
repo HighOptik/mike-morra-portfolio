@@ -57,9 +57,14 @@ export default function FeaturedCarousel({ project }: Props) {
                 <span key={t}>{t}</span>
               ))}
             </div>
-            <SlideActions project={project} />
           </div>
           <div className="featured-slide">
+            <img
+              className="featured-shot"
+              src={asset("art/select.gif")}
+              alt="UberLoop character select"
+              draggable={false}
+            />
             <div className="featured-about">
               {project.about.map((p) => (
                 <p key={p}>{p}</p>
@@ -70,7 +75,6 @@ export default function FeaturedCarousel({ project }: Props) {
                 ))}
               </ul>
             </div>
-            <SlideActions project={project} />
           </div>
         </div>
       </div>
@@ -105,33 +109,28 @@ export default function FeaturedCarousel({ project }: Props) {
           ›
         </button>
       </div>
-    </div>
-  );
-}
-
-function SlideActions({ project }: { project: Project }) {
-  return (
-    <div className="actions">
-      {project.href && (
-        <a className="btn" href={project.href} target="_blank" rel="noreferrer">
-          {project.hrefLabel ?? "Open"}
+      <div className="actions">
+        {project.href && (
+          <a className="btn" href={project.href} target="_blank" rel="noreferrer">
+            {project.hrefLabel ?? "Open"}
+          </a>
+        )}
+        {project.itch && (
+          <a className="btn ghost" href={project.itch} target="_blank" rel="noreferrer">
+            itch.io
+          </a>
+        )}
+        <a
+          className="btn ghost"
+          href="#play"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToId("play");
+          }}
+        >
+          Play here
         </a>
-      )}
-      {project.itch && (
-        <a className="btn ghost" href={project.itch} target="_blank" rel="noreferrer">
-          itch.io
-        </a>
-      )}
-      <a
-        className="btn ghost"
-        href="#play"
-        onClick={(e) => {
-          e.preventDefault();
-          scrollToId("play");
-        }}
-      >
-        Play here
-      </a>
+      </div>
     </div>
   );
 }
