@@ -4,13 +4,13 @@ Lead Unity developer site. UberLoop plays in-page via the itch.io HTML5 embed.
 
 Live (GitHub Pages): https://highoptik.github.io/mike-morra-portfolio/
 
-Pushes to `main` do not auto-deploy. After a change you want live:
+After any visitor-facing change, publish immediately:
 
 ```bash
-npm run build
+npm run deploy
 ```
 
-Then publish the `dist` folder to the `gh-pages` branch. GitHub Pages is free for this public repo.
+That builds with the GitHub Pages base path and pushes `dist` to `gh-pages`. Do not leave the live site behind the local files. GitHub may cache the HTML for about 10 minutes.
 
 ## Run locally
 
