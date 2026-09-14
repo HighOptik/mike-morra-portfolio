@@ -29,6 +29,8 @@ export type Project = {
   year: string;
   role: string;
   blurb: string;
+  about: string[];
+  features: string[];
   tags: string[];
   href?: string;
   hrefLabel?: string;
@@ -46,6 +48,21 @@ export const projects: Project[] = [
     role: "Design & Unity",
     blurb:
       "Top-down survivor I'm making in Unity. Hordes, unlocks, stacked skills, timed bosses. Steam page is up. Coming soon.",
+    about: [
+      "Survive the clock, drop the bosses—that's the run. Enemy swarms spike throughout the match, boss fights hit at set moments, and the music ramps up when things get ugly.",
+      "UberLoop is a 3D top-down survivor with bullet-heaven combat—move, aim, and outlast escalating hordes while your build snowballs out of control.",
+      "Pick a character, level up with stat choices, crack open loot chests for new skills, and stack burn, poison, shock, cryo, auras, crit chains, and splash until nothing on the map survives your loop.",
+    ],
+    features: [
+      "5 playable characters (so far).",
+      "Stat upgrades on level-up plus stackable combat skills you find during the run.",
+      "Elemental paths: burn, poison, shock, and cryo.",
+      "Boss fights at set times, ending in a final boss.",
+      "Sudden enemy swarms and elites that can wreck a run.",
+      "Loot chests, XP pickups, coins, and a magnetic pickup upgrade.",
+      "Achievements tracked per character and across your career.",
+      "Remappable keyboard controls. Touch on mobile. Gamepad-friendly UI.",
+    ],
     tags: ["Unity", "C#", "Steam", "itch.io"],
     href: "https://store.steampowered.com/app/4797000/UberLoop/",
     hrefLabel: "Steam",

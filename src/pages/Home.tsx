@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Footer from "../components/Footer";
+import FeaturedCarousel from "../components/FeaturedCarousel";
 import ItchEmbed from "../components/ItchEmbed";
 import Nav, { scrollToId } from "../components/Nav";
 import { asset, experience, projects, site } from "../data/site";
@@ -61,39 +62,7 @@ export default function Home() {
         <div className="featured-copy">
           <p className="kicker">Coming soon</p>
           <h2>UberLoop</h2>
-          <img
-            className="featured-shot"
-            src={asset("art/levelup.gif")}
-            alt="UberLoop gameplay"
-          />
-          <p>{featured.blurb}</p>
-          <div className="tags">
-            {featured.tags.map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
-          <div className="actions">
-            {featured.href && (
-              <a className="btn" href={featured.href} target="_blank" rel="noreferrer">
-                {featured.hrefLabel ?? "Open"}
-              </a>
-            )}
-            {featured.itch && (
-              <a className="btn ghost" href={featured.itch} target="_blank" rel="noreferrer">
-                itch.io
-              </a>
-            )}
-            <a
-              className="btn ghost"
-              href="#play"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToId("play");
-              }}
-            >
-              Play here
-            </a>
-          </div>
+          <FeaturedCarousel project={featured} />
         </div>
       </section>
 

@@ -245,6 +245,96 @@ html {
   max-width: 920px;
   height: auto;
   margin: 0 0 22px;
+  pointer-events: none;
+}
+
+.featured-carousel {
+  margin-top: 4px;
+}
+
+.featured-viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.featured-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.featured-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.featured-about p {
+  max-width: 42rem;
+  margin: 0 0 14px;
+}
+
+.featured-about ul {
+  max-width: 42rem;
+  margin: 8px 0 22px;
+  padding-left: 1.2rem;
+  color: #e4d8ff;
+}
+
+.featured-about li + li {
+  margin-top: 6px;
+}
+
+.featured-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.featured-arrow {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #3ce8e0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.featured-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.featured-arrow:not(:disabled):hover {
+  background: #3ce8e0;
+  color: #04221f;
+}
+
+.featured-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.featured-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 246, 234, 0.28);
+  cursor: pointer;
+}
+
+.featured-dots button.is-on {
+  background: #3ce8e0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-track {
+    transition: none;
+  }
 }
 
 .featured-copy p {
