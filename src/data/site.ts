@@ -17,6 +17,7 @@ export const site = {
     { label: "Bluesky", href: "https://bsky.app/profile/soopertype.bsky.social" },
     { label: "X", href: "https://x.com/UberL00p" },
     { label: "TikTok", href: "https://www.tiktok.com/@soopertype" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/michael-morra-a370a4238/" },
   ],
 };
 
