@@ -242,9 +242,8 @@ html {
 .featured-shot {
   display: block;
   width: 100%;
-  max-width: 920px;
   height: auto;
-  margin: 0 0 22px;
+  margin: 0;
   pointer-events: none;
 }
 
@@ -265,15 +264,19 @@ html {
 .featured-slide {
   min-width: 100%;
   flex-shrink: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 28px;
+  align-items: start;
 }
 
 .featured-about p {
-  max-width: 42rem;
+  max-width: none;
   margin: 0 0 14px;
 }
 
 .featured-about ul {
-  max-width: 42rem;
+  max-width: none;
   margin: 8px 0 22px;
   padding-left: 1.2rem;
   color: #e4d8ff;
@@ -755,6 +758,10 @@ code {
 
   .featured-copy {
     padding: 36px 24px;
+  }
+
+  .featured-slide {
+    grid-template-columns: 1fr;
   }
 
   .hero-copy h1 {
