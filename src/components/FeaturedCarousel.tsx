@@ -45,22 +45,20 @@ export default function FeaturedCarousel({ project }: Props) {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           <div className="featured-slide">
-            <div>
-              <p>{project.blurb}</p>
-              <div className="tags">
-                {project.tags.map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
-              </div>
-            </div>
             <img
               className="featured-shot"
               src={asset("art/levelup.gif")}
               alt="UberLoop gameplay"
               draggable={false}
             />
+            <p>{project.blurb}</p>
+            <div className="tags">
+              {project.tags.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
           </div>
-          <div className="featured-slide">
+          <div className="featured-slide featured-slide-split">
             <div className="featured-about">
               {project.about.map((p) => (
                 <p key={p}>{p}</p>
