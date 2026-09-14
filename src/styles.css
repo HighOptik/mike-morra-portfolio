@@ -276,11 +276,11 @@ html {
 
 .featured-slide-split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, var(--featured-gif));
+  grid-template-columns: minmax(0, 36rem) minmax(0, var(--featured-gif));
   gap: 28px;
   align-items: center;
   justify-content: center;
-  max-width: calc(var(--featured-gif) + 36rem + 28px);
+  width: 100%;
   margin: 0 auto;
   text-align: left;
 }
@@ -806,6 +806,7 @@ code {
 
   .featured-slide-split {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .hero-copy h1 {
