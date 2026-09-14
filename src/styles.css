@@ -51,8 +51,6 @@ html {
   overflow-x: clip;
 }
 
-.shell {
-
 .hero-stage {
   position: relative;
   min-height: 100vh;
