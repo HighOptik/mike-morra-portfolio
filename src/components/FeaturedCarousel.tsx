@@ -69,12 +69,20 @@ export default function FeaturedCarousel({ project }: Props) {
                 ))}
               </ul>
             </div>
-            <img
-              className="featured-shot"
-              src={asset("art/select.gif")}
-              alt="UberLoop character select"
-              draggable={false}
-            />
+            <div className="featured-gifs">
+              <img
+                className="featured-shot"
+                src={asset("art/select.gif")}
+                alt="UberLoop character select"
+                draggable={false}
+              />
+              <img
+                className="featured-shot"
+                src={asset("art/skills.gif")}
+                alt="UberLoop skills"
+                draggable={false}
+              />
+            </div>
           </div>
         </div>
       </div>

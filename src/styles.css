@@ -305,6 +305,18 @@ html {
   justify-self: center;
 }
 
+.featured-gifs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: var(--featured-gif);
+}
+
+.featured-gifs .featured-shot {
+  margin: 0;
+}
+
 .featured-about p {
   max-width: none;
   margin: 0 0 14px;
