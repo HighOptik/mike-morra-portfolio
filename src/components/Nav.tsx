@@ -38,7 +38,9 @@ export default function Nav() {
         <a href="#play" onClick={goSection("play")}>
           Play
         </a>
-        <a href={`mailto:${site.email}`}>Contact</a>
+        <a href="#contact" onClick={goSection("contact")}>
+          Contact
+        </a>
       </nav>
     </header>
   );

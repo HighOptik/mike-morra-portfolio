@@ -2,7 +2,7 @@ import { site } from "../data/site";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div>
         <strong>{site.name}</strong>
         <span>
