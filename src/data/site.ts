@@ -7,6 +7,8 @@ export const site = {
   location: "Toronto, ON",
   email: "mikeemorra@gmail.com",
   phone: "647-984-9824",
+  mailHref: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent("mikeemorra@gmail.com")}`,
+  phoneHref: "tel:+16479849824",
   steam: "https://store.steampowered.com/app/4797000/UberLoop/",
   itch: "https://mikemo.itch.io/uberloop",
   summary:

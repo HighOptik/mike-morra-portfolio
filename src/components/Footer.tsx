@@ -10,8 +10,10 @@ export default function Footer() {
         </span>
       </div>
       <div className="footer-links">
-        <a href={`mailto:${site.email}`}>{site.email}</a>
-        <a href={`tel:${site.phone.replace(/-/g, "")}`}>{site.phone}</a>
+        <a href={site.mailHref} target="_blank" rel="noreferrer">
+          {site.email}
+        </a>
+        <a href={site.phoneHref}>{site.phone}</a>
       </div>
     </footer>
   );
