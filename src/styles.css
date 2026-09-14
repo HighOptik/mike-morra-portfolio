@@ -234,6 +234,7 @@ html {
 .featured-copy {
   color: var(--ink);
   padding: 0 var(--featured-pad) 16px;
+  text-align: center;
 }
 
 .featured-copy h2 {
@@ -246,7 +247,7 @@ html {
   width: 100%;
   max-width: var(--featured-gif);
   height: auto;
-  margin: 0 0 22px;
+  margin: 0 auto 22px;
   pointer-events: none;
   object-fit: contain;
 }
@@ -271,13 +272,29 @@ html {
   min-width: 100%;
   flex-shrink: 0;
   padding: 0 var(--featured-pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featured-slide > p {
+  max-width: 36rem;
+}
+
+.featured-slide .tags {
+  justify-content: center;
 }
 
 .featured-slide-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, var(--featured-gif));
   gap: 28px;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(var(--featured-gif) + 36rem + 28px);
+  margin: 0 auto;
+  text-align: left;
 }
 
 .featured-slide-split .featured-shot {
@@ -285,7 +302,7 @@ html {
   max-width: var(--featured-gif);
   max-height: none;
   margin: 0;
-  justify-self: end;
+  justify-self: center;
 }
 
 .featured-about p {
@@ -356,6 +373,7 @@ html {
 .featured-carousel .actions {
   margin-top: 18px;
   padding: 0 var(--featured-pad);
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
