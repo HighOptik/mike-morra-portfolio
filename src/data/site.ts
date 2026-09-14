@@ -35,7 +35,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Design & Unity",
     blurb:
-      "Unity 3D top-down survivor / bullet-heaven. Horde combat, character unlocks, stacking skills, elemental builds, timed bosses. Steam page is live; currently Coming soon. Play the in-progress HTML5 build below.",
+      "Unity 3D top-down survivor / bullet-heaven. Horde combat, character unlocks, stacking skills, elemental builds, timed bosses. Steam page is live; currently Coming soon.",
     tags: ["Unity", "C#", "Steam", "itch.io"],
     href: "https://store.steampowered.com/app/4797000/UberLoop/",
     hrefLabel: "Steam",

@@ -72,7 +72,6 @@ export default function Home() {
           <header className="section-head">
             <p className="kicker">Play in the browser</p>
             <h2>{featured.title}</h2>
-            <p>In-development HTML5 build, hosted on itch.io. Stays quiet until you press Play.</p>
           </header>
           <ItchEmbed src={featured.embedUrl} title={featured.title} itch={featured.itch} />
         </section>

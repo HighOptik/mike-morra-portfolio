@@ -24,7 +24,6 @@ export default function ItchEmbed({
             <button type="button" className="embed-stop" onClick={() => setActive(false)}>
               Stop
             </button>
-            <span>Stops the player and the audio.</span>
           </div>
           <iframe
             title={title}
@@ -38,15 +37,13 @@ export default function ItchEmbed({
           <img src={poster} alt="" />
           <span className="embed-gate-ui">
             <span className="embed-play">Play {title}</span>
-            <span className="embed-hint">Click to load. Audio starts with the game.</span>
           </span>
         </button>
       )}
       {itch && (
         <p className="embed-note">
-          Hosted on itch.io —{" "}
           <a href={itch} target="_blank" rel="noreferrer">
-            open fullscreen on itch
+            itch.io
           </a>
         </p>
       )}

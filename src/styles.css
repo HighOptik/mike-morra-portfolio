@@ -346,11 +346,6 @@ h3 {
   font-weight: 700;
 }
 
-.embed-hint {
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
 .embed-frame {
   position: relative;
 }
@@ -358,10 +353,7 @@ h3 {
 .embed-toolbar {
   display: flex;
   align-items: center;
-  gap: 12px;
   margin-bottom: 10px;
-  font-size: 0.9rem;
-  color: var(--muted);
 }
 
 .embed-stop {
