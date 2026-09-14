@@ -4,14 +4,14 @@ import { asset } from "../data/site";
 type Props = {
   src: string;
   title: string;
-  itch?: string;
+  steam?: string;
   poster?: string;
 };
 
 export default function ItchEmbed({
   src,
   title,
-  itch,
+  steam,
   poster = asset("art/gameplay.png"),
 }: Props) {
   const [active, setActive] = useState(false);
@@ -40,12 +40,12 @@ export default function ItchEmbed({
           </span>
         </button>
       )}
-      {itch && (
-        <p className="embed-note">
-          <a href={itch} target="_blank" rel="noreferrer">
-            itch.io
+      {steam && (
+        <div className="embed-cta">
+          <a className="btn" href={steam} target="_blank" rel="noreferrer">
+            Wishlist on Steam
           </a>
-        </p>
+        </div>
       )}
     </div>
   );

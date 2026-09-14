@@ -73,7 +73,7 @@ export default function Home() {
             <p className="kicker">Play in the browser</p>
             <h2>{featured.title}</h2>
           </header>
-          <ItchEmbed src={featured.embedUrl} title={featured.title} itch={featured.itch} />
+          <ItchEmbed src={featured.embedUrl} title={featured.title} steam={featured.href} />
         </section>
       )}
 

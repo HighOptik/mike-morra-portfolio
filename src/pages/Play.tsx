@@ -33,7 +33,7 @@ export default function Play() {
           )}
         </span>
       </header>
-      <ItchEmbed src={project.embedUrl} title={project.title} itch={project.itch} />
+      <ItchEmbed src={project.embedUrl} title={project.title} steam={project.href} />
     </div>
   );
 }

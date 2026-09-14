@@ -371,14 +371,10 @@ h3 {
   color: #04221f;
 }
 
-.embed-note {
-  margin: 12px 0 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.embed-note a {
-  color: var(--gold);
+.embed-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
 }
 
 .play-page .embed {
