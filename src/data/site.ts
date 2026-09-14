@@ -54,7 +54,7 @@ export const projects: Project[] = [
       "Pick a character, level up with stat choices, crack open loot chests for new skills, and stack burn, poison, shock, cryo, auras, crit chains, and splash until nothing on the map survives your loop.",
     ],
     features: [
-      "5 playable characters (so far).",
+      "Over 5 playable characters (so far).",
       "Stat upgrades on level-up plus stackable combat skills you find during the run.",
       "Elemental paths: burn, poison, shock, and cryo.",
       "Boss fights at set times, ending in a final boss.",
