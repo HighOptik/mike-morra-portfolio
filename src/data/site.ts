@@ -10,7 +10,7 @@ export const site = {
   steam: "https://store.steampowered.com/app/4797000/UberLoop/",
   itch: "https://mikemo.itch.io/uberloop",
   summary:
-    "Gameplay systems, production C#, and player-facing features — from prototype through ship. Currently releasing UberLoop on Steam.",
+    "Unity lead in Toronto. I build gameplay and ship features. UberLoop is on Steam.",
 };
 
 export type Project = {
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Design & Unity",
     blurb:
-      "Unity 3D top-down survivor / bullet-heaven. Horde combat, character unlocks, stacking skills, elemental builds, timed bosses. Steam page is live; currently Coming soon.",
+      "Top-down survivor I'm making in Unity. Hordes, unlocks, stacked skills, timed bosses. Steam page is up. Coming soon.",
     tags: ["Unity", "C#", "Steam", "itch.io"],
     href: "https://store.steampowered.com/app/4797000/UberLoop/",
     hrefLabel: "Steam",
@@ -52,8 +52,8 @@ export const experience = [
     title: "Lead Unity Developer",
     dates: "Aug 2023 — Feb 2026",
     points: [
-      "Led implementation of gameplay systems and player-facing features from concept through production.",
-      "Set coding standards and workflows; mentored juniors and supported hiring.",
+      "Led gameplay and feature work in Unity.",
+      "Set coding standards. Mentored juniors and helped with hiring.",
     ],
   },
   {
@@ -61,8 +61,8 @@ export const experience = [
     title: "Unity Developer & Technology Specialist",
     dates: "Aug 2019 — May 2023",
     points: [
-      "Shipped gameplay, UI, and technical systems; built prototypes for new concepts.",
-      "Implemented multiplayer features and worked across art and design.",
+      "Shipped gameplay, UI, and tech on production projects.",
+      "Did multiplayer work. Prototyped new ideas with art and design.",
     ],
   },
   {
@@ -70,7 +70,7 @@ export const experience = [
     title: "Video Game Instructor",
     dates: "Feb 2023 — Mar 2024",
     points: [
-      "Taught Unity and production practices; coached students through iteration and ship-ready habits.",
+      "Taught Unity. Helped students finish their games.",
     ],
   },
 ];

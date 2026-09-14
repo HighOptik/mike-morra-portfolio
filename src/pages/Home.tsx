@@ -32,8 +32,7 @@ export default function Home() {
             <p className="lede">{site.summary}</p>
             <ul className="pills">
               <li>5+ years Unity / C#</li>
-              <li>Gameplay systems</li>
-              <li>Play UberLoop below</li>
+              <li>Toronto</li>
             </ul>
           </div>
         </div>
@@ -41,7 +40,7 @@ export default function Home() {
 
       <section className="featured-band" id="work">
         <div className="featured-copy">
-          <p className="kicker">Independent · {featured.year}</p>
+          <p className="kicker">Coming soon</p>
           <img className="wordmark" src={asset("art/wordmark.png")} alt="UberLoop" />
           <p>{featured.blurb}</p>
           <div className="tags">
@@ -70,7 +69,6 @@ export default function Home() {
       {featured.embedUrl && (
         <section className="play-band" id="play">
           <header className="section-head">
-            <p className="kicker">Play in the browser</p>
             <h2>{featured.title}</h2>
           </header>
           <ItchEmbed src={featured.embedUrl} title={featured.title} steam={featured.href} />
@@ -79,8 +77,7 @@ export default function Home() {
 
       <section className="exp">
         <header className="section-head invert">
-          <p className="kicker">Studios</p>
-          <h2>Selected experience</h2>
+          <h2>Experience</h2>
         </header>
         <ol>
           {experience.map((job, i) => (
