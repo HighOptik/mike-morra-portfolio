@@ -11,6 +11,13 @@ export const site = {
   itch: "https://mikemo.itch.io/uberloop",
   summary:
     "Unity lead in Toronto. I build gameplay and ship features. UberLoop is on Steam.",
+  socials: [
+    { label: "Instagram", href: "https://www.instagram.com/soopertype/" },
+    { label: "Facebook", href: "https://www.facebook.com/SooperType/" },
+    { label: "Bluesky", href: "https://bsky.app/profile/soopertype.bsky.social" },
+    { label: "X", href: "https://x.com/UberL00p" },
+    { label: "TikTok", href: "https://www.tiktok.com/@soopertype" },
+  ],
 };
 
 export type Project = {

@@ -174,13 +174,21 @@ h3 {
   margin: 18px 0 0;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 28px 0 0;
+}
+
 .pills {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0;
-  margin: 28px 0 0;
+  margin: 0;
 }
 
 .pills li {
@@ -189,6 +197,30 @@ h3 {
   font-weight: 700;
   font-size: 0.86rem;
   padding: 8px 12px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #3ce8e0;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 6px 12px;
+}
+
+.socials a:hover {
+  background: #3ce8e0;
+  color: #04221f;
 }
 
 .featured-band {

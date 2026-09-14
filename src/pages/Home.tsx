@@ -30,10 +30,21 @@ export default function Home() {
               Morra
             </h1>
             <p className="lede">{site.summary}</p>
-            <ul className="pills">
-              <li>5+ years Unity / C#</li>
-              <li>Toronto</li>
-            </ul>
+            <div className="hero-actions">
+              <ul className="pills">
+                <li>5+ years Unity / C#</li>
+                <li>Toronto</li>
+              </ul>
+              <ul className="socials">
+                {site.socials.map((s) => (
+                  <li key={s.href}>
+                    <a href={s.href} target="_blank" rel="noreferrer">
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
