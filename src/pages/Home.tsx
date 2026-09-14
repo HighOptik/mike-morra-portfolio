@@ -1,20 +1,19 @@
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import ItchEmbed from "../components/ItchEmbed";
 import Nav from "../components/Nav";
-import { experience, projects, site } from "../data/site";
+import { asset, experience, projects, site } from "../data/site";
 
 const jobTone = ["tone-magma", "tone-plasma", "tone-gold"] as const;
 
 export default function Home() {
   const featured = projects.find((p) => p.featured) ?? projects[0];
-  const rest = projects.filter((p) => p.slug !== featured.slug);
 
   return (
     <div className="shell">
       <section className="hero-stage">
         <img
           className="hero-photo"
-          src="/art/gameplay.png"
+          src={asset("art/gameplay.png")}
           alt="UberLoop gameplay: a knight in a horde"
         />
         <div className="hero-shade" />
@@ -34,7 +33,7 @@ export default function Home() {
             <ul className="pills">
               <li>5+ years Unity / C#</li>
               <li>Gameplay systems</li>
-              <li>WebGL hosted here</li>
+              <li>Play UberLoop below</li>
             </ul>
           </div>
         </div>
@@ -43,7 +42,7 @@ export default function Home() {
       <section className="featured-band" id="work">
         <div className="featured-copy">
           <p className="kicker">Independent · {featured.year}</p>
-          <img className="wordmark" src="/art/wordmark.png" alt="UberLoop" />
+          <img className="wordmark" src={asset("art/wordmark.png")} alt="UberLoop" />
           <p>{featured.blurb}</p>
           <div className="tags">
             {featured.tags.map((t) => (
@@ -56,36 +55,28 @@ export default function Home() {
                 {featured.hrefLabel ?? "Open"}
               </a>
             )}
-            {featured.playable && (
-              <Link className="btn ghost" to={`/play/${featured.slug}`}>
-                Play in browser
-              </Link>
+            {featured.itch && (
+              <a className="btn ghost" href={featured.itch} target="_blank" rel="noreferrer">
+                itch.io
+              </a>
             )}
+            <a className="btn ghost" href="#play">
+              Play here
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="play-band" id="play">
-        <header className="section-head">
-          <p className="kicker">Live on this site</p>
-          <h2>Hosted WebGL</h2>
-          <p>Unity exports drop into a folder. The playground below is running in the browser now.</p>
-        </header>
-        <ul className="cards">
-          {rest.map((p) => (
-            <li key={p.slug}>
-              <Link className="card play-card" to={`/play/${p.slug}`}>
-                <p className="kicker">
-                  {p.year} · {p.role}
-                </p>
-                <h3>{p.title}</h3>
-                <p>{p.blurb}</p>
-                <em>Launch the arena</em>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {featured.embedUrl && (
+        <section className="play-band" id="play">
+          <header className="section-head">
+            <p className="kicker">Play in the browser</p>
+            <h2>{featured.title}</h2>
+            <p>In-development HTML5 build, hosted on itch.io. Stays quiet until you press Play.</p>
+          </header>
+          <ItchEmbed src={featured.embedUrl} title={featured.title} itch={featured.itch} />
+        </section>
+      )}
 
       <section className="exp">
         <header className="section-head invert">

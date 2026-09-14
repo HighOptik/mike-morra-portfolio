@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { site } from "../data/site";
+import { asset, site } from "../data/site";
 
 export default function Nav() {
   return (
     <header className="nav">
       <Link to="/" className="nav-mark">
-        <img src="/art/mark.png" alt="" width={40} height={40} />
+        <img src={asset("art/mark.png")} alt="" width={40} height={40} />
         {site.name}
       </Link>
       <nav>
