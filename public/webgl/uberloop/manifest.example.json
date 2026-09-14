@@ -1,0 +1,10 @@
+{
+  "loaderUrl": "Build/UberLoop.loader.js",
+  "dataUrl": "Build/UberLoop.data",
+  "frameworkUrl": "Build/UberLoop.framework.js",
+  "codeUrl": "Build/UberLoop.wasm",
+  "streamingAssetsUrl": "StreamingAssets",
+  "companyName": "SooperType",
+  "productName": "UberLoop",
+  "productVersion": "0.1.0"
+}

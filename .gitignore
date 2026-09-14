@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Unity WebGL binaries are large — keep manifests, ignore the build payload
+public/webgl/**/Build/*.data
+public/webgl/**/Build/*.data.gz
+public/webgl/**/Build/*.data.br
+public/webgl/**/Build/*.wasm
+public/webgl/**/Build/*.wasm.gz
+public/webgl/**/Build/*.wasm.br
+public/webgl/**/Build/*.js
+public/webgl/**/Build/*.js.gz
+public/webgl/**/Build/*.js.br
+public/webgl/**/Build/*.symbols.json
+public/webgl/**/StreamingAssets/**
+!public/webgl/**/Build/.gitkeep
