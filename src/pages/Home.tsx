@@ -1,12 +1,20 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import ItchEmbed from "../components/ItchEmbed";
-import Nav from "../components/Nav";
+import Nav, { scrollToId } from "../components/Nav";
 import { asset, experience, projects, site } from "../data/site";
 
 const jobTone = ["tone-magma", "tone-plasma", "tone-gold"] as const;
 
 export default function Home() {
   const featured = projects.find((p) => p.featured) ?? projects[0];
+
+  useEffect(() => {
+    const id = window.location.hash.replace(/^#/, "");
+    if (!id) return;
+    const t = window.setTimeout(() => scrollToId(id), 0);
+    return () => window.clearTimeout(t);
+  }, []);
 
   return (
     <div className="shell">
@@ -75,7 +83,14 @@ export default function Home() {
                 itch.io
               </a>
             )}
-            <a className="btn ghost" href="#play">
+            <a
+              className="btn ghost"
+              href="#play"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToId("play");
+              }}
+            >
               Play here
             </a>
           </div>

@@ -47,9 +47,11 @@ h3 {
   margin: 0;
 }
 
-.shell {
-  overflow-x: hidden;
+html {
+  overflow-x: clip;
 }
+
+.shell {
 
 .hero-stage {
   position: relative;
