@@ -86,6 +86,7 @@ export default function Home() {
         <section className="play-band" id="play">
           <header className="section-head">
             <h2>{featured.title}</h2>
+            <p>The free demo on Steam is further along than the itch build below.</p>
           </header>
           <ItchEmbed src={featured.embedUrl} title={featured.title} steam={featured.href} />
         </section>
