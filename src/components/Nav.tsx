@@ -10,16 +10,14 @@ export default function Nav() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const goHome = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (location.pathname !== "/") return;
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const goSection = (id: string) => (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (location.pathname !== "/") {
       navigate({ pathname: "/", hash: `#${id}` });
+      return;
+    }
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
     scrollToId(id);
@@ -27,7 +25,7 @@ export default function Nav() {
 
   return (
     <header className="nav">
-      <Link to="/" className="nav-mark" onClick={goHome}>
+      <Link to="/#top" className="nav-mark" onClick={goSection("top")}>
         <img src={asset("art/mark.png")} alt="" width={40} height={40} />
         {site.name}
       </Link>

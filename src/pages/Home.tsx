@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="shell">
-      <section className="hero-stage">
+      <section className="hero-stage" id="top">
         <img
           className="hero-photo"
           src={asset("art/gameplay.png")}
