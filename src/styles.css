@@ -224,14 +224,16 @@ html {
 }
 
 .featured-band {
+  --featured-pad: clamp(20px, 4vw, 48px);
+  --featured-gif: min(720px, calc(100vw - (2 * var(--featured-pad))));
   background: #16102c;
+  overflow: hidden;
+  padding: 64px 0 48px;
 }
 
 .featured-copy {
-  max-width: 1180px;
-  margin: 0 auto;
   color: var(--ink);
-  padding: 64px 28px;
+  padding: 0 var(--featured-pad) 16px;
 }
 
 .featured-copy h2 {
@@ -242,19 +244,21 @@ html {
 .featured-shot {
   display: block;
   width: 100%;
-  max-width: 920px;
+  max-width: var(--featured-gif);
   height: auto;
   margin: 0 0 22px;
   pointer-events: none;
+  object-fit: contain;
 }
 
 .featured-carousel {
-  margin-top: 4px;
+  width: 100%;
 }
 
 .featured-viewport {
   overflow: hidden;
   touch-action: pan-y;
+  width: 100%;
 }
 
 .featured-track {
@@ -263,25 +267,25 @@ html {
 }
 
 .featured-slide {
+  box-sizing: border-box;
   min-width: 100%;
   flex-shrink: 0;
+  padding: 0 var(--featured-pad);
 }
 
 .featured-slide-split {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.7fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, var(--featured-gif));
+  gap: 28px;
   align-items: start;
-  overflow: hidden;
 }
 
 .featured-slide-split .featured-shot {
   width: 100%;
-  max-width: 360px;
-  max-height: 240px;
+  max-width: var(--featured-gif);
+  max-height: none;
   margin: 0;
   justify-self: end;
-  object-fit: contain;
 }
 
 .featured-about p {
@@ -306,6 +310,7 @@ html {
   justify-content: center;
   gap: 16px;
   margin-top: 22px;
+  padding: 0 var(--featured-pad);
 }
 
 .featured-arrow {
@@ -350,6 +355,7 @@ html {
 
 .featured-carousel .actions {
   margin-top: 18px;
+  padding: 0 var(--featured-pad);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -771,7 +777,7 @@ code {
   }
 
   .featured-copy {
-    padding: 36px 24px;
+    padding: 0 var(--featured-pad) 12px;
   }
 
   .featured-slide-split {

@@ -62,8 +62,8 @@ export default function Home() {
         <div className="featured-copy">
           <p className="kicker">Coming soon</p>
           <h2>UberLoop</h2>
-          <FeaturedCarousel project={featured} />
         </div>
+        <FeaturedCarousel project={featured} />
       </section>
 
       {featured.embedUrl && (
