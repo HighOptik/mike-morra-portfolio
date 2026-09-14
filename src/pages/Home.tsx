@@ -41,7 +41,12 @@ export default function Home() {
       <section className="featured-band" id="work">
         <div className="featured-copy">
           <p className="kicker">Coming soon</p>
-          <img className="wordmark" src={asset("art/wordmark.png")} alt="UberLoop" />
+          <h2>UberLoop</h2>
+          <img
+            className="featured-shot"
+            src={asset("art/levelup.jpg")}
+            alt="UberLoop level up"
+          />
           <p>{featured.blurb}</p>
           <div className="tags">
             {featured.tags.map((t) => (

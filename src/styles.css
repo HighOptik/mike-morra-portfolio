@@ -202,11 +202,17 @@ h3 {
   padding: 64px 28px;
 }
 
-.wordmark {
-  width: min(280px, 100%);
-  height: auto;
+.featured-copy h2 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
   margin: 4px 0 18px;
-  mix-blend-mode: screen;
+}
+
+.featured-shot {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  margin: 0 0 22px;
 }
 
 .featured-copy p {
