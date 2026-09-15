@@ -52,8 +52,9 @@ const existing = readExisting();
 try {
   const data = await getJson(NEWS_URL);
   const items = data.appnews?.newsitems ?? [];
-  const item =
-    items.find((entry) => entry.tags?.includes("patchnotes")) ?? items[0];
+  // Newest first. Do not require the patchnotes tag — community build posts
+  // often omit it, and preferring the last tagged note would hide newer updates.
+  const item = items[0];
   if (!item?.date) throw new Error("No Steam news items");
 
   const status = {
