@@ -1,0 +1,54 @@
+name: Steam status
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Checkout live site
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: pages
+
+      - name: Refresh steam-status.json
+        run: node scripts/fetch-steam-status.mjs pages/steam-status.json
+
+      - name: Publish if Steam changed
+        working-directory: pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add steam-status.json
+          if git diff --staged --quiet; then
+            echo "Steam status unchanged."
+          else
+            git commit -m "Refresh Steam last-updated time."
+            git push
+          fi
+
+      # Pushes made with GITHUB_TOKEN do not trigger another Pages build.
+      # Deploy explicitly so the refreshed JSON reaches the public site.
+      - name: Upload live site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages
+
+      - name: Deploy refreshed site
+        id: deployment
+        uses: actions/deploy-pages@v4
